@@ -1,0 +1,12 @@
+server:
+  port: 81
+
+spring:
+  application:
+    name: blog-user
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+service-url:
+  nacos-user-service: http://blog-main
