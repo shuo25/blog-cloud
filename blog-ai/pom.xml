@@ -7,10 +7,10 @@
         <groupId>org.wang</groupId>
         <artifactId>blog-cloud</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
-    <name>blog-user</name>
-    <description>博客用户服务</description>
-    <artifactId>blog-user</artifactId>
+
+    <artifactId>blog-ai</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -19,24 +19,13 @@
     </properties>
 
     <dependencies>
-        <!--nacos-discovery-->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-core</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <!--loadbalancer-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
-        </dependency>
-        <!--web + actuator-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-cloud-starter-alibaba-ai</artifactId>
         </dependency>
         <!--lombok-->
         <dependency>
@@ -45,4 +34,5 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+
 </project>
